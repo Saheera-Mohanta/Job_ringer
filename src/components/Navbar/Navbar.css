@@ -1,0 +1,160 @@
+/* Navbar Styles */
+  .navbar{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: rgb(218, 218, 218); */
+    position: fixed;
+    z-index: 1;
+    transition: background-color 0.3s ease;
+    padding: 20px;
+}
+  .navbar.scrolled {
+    background-color: #eae7e7; 
+    color: #fff; 
+}
+  .navbar-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-logo {
+    height: 40px;
+    cursor: pointer;
+  }
+
+  .heading-container {
+    text-align: center; 
+    margin: 20px;
+    font-family: "WF Visual Sans", sans-serif;
+  }
+  
+  .animated-gradient-text {
+    font-size: 2; 
+    font-weight: bold;
+    background: linear-gradient(to right, black, blue, black);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: move-gradient 3s infinite;
+    text-align: center;
+  }
+  
+  @keyframes move-gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+  
+  
+  .navbar-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-links li {
+    margin: 0 10px;
+  }
+  
+  .navbar-links a {
+    color: #020101;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: "WF Visual Sans", sans-serif;
+  }
+  
+  .navbar-links a:hover {
+    text-decoration: underline;
+    color:#0030F9;
+  }
+  
+  .navbar-btn {
+    width: 180px;
+    height: 40px;
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #060606;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .navbar-btn:hover {
+    background-color: #0030F9;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .navbar {
+      height: 390px;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .navbar-right {
+      align-self: center;
+      margin-right: 50px;
+    }
+    .heading-container h1{
+      text-align: center;
+      margin-right: 50px;
+    }
+    .navbar-left {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+    }
+  
+    .navbar-links {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+    }
+  
+    .navbar-links li {
+      margin: 5px 0;
+    }
+  
+    .navbar-btn {
+      width: 70%;
+      text-align: center;
+      margin-bottom: 5px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .navbar {
+      padding: 10px;
+    }
+  
+    .navbar-logo {
+      height: 30px;
+      text-align: center;
+    }
+  
+    .navbar-btn {
+      font-size: 12px;
+      padding: 8px;
+    }
+  
+    .navbar-links a {
+      font-size: 12px;
+    }
+  }
+  
